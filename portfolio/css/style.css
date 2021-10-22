@@ -1,0 +1,1275 @@
+/* =======================
+   GLOBAL
+   ======================= */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+
+/* Global colors + margin */
+:root {
+	--red: #b2505c;
+	--gray: #88867c;
+	--black: #0a0a0a;
+	--white: #f9f9f1;
+	--margin: 0 2% 0 2%;
+}
+
+/* Reset */
+* {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+/* Centered headers */
+header {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Global font + typography size */
+body {
+	background-color: var(--white);
+	line-height: 1.6;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	font-size: 0.9rem;
+}
+
+
+/* ------- Typograhy ------- */
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1;
+	font-weight: bolder;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2.5rem;
+	color: var(--white);
+}
+
+h2 {
+	font-size: 3.1rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+/* =======================
+   LANDING PAGE
+   ======================= */
+
+/* ------- Gradient background ------- */
+.gradient {
+	background-color: var(--red);
+	background-image: linear-gradient(315deg, var(--red) 0%, #4c131a 74%);
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	color: var(--white);
+	overflow-x: hidden;
+}
+
+/* ------- Top divider ------- */
+.custom-shape-divider-top-1634485691 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.custom-shape-divider-top-1634485691 svg {
+	position: relative;
+	display: block;
+	width: calc(251% + 1.3px);
+	height: 93px;
+}
+
+.custom-shape-divider-top-1634485691 .shape-fill {
+	fill: #F9F9F1;
+}
+
+/* ------- Bottom divider ------- */
+.custom-shape-divider-bottom-1634485284 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1634485284 svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 120px;
+}
+
+.custom-shape-divider-bottom-1634485284 .shape-fill {
+	fill: #F9F9F1;
+}
+
+/* ------- Navbar 1000px > ------- */
+.normal_nav {
+	z-index: 2;
+	position: relative;
+	display: flex;
+	justify-content: right;
+	color: var(--black);
+	margin-right: 50px;
+	padding: 2rem;
+}
+
+.normal_nav ul {
+	display: flex;
+}
+
+.normal_nav ul li {
+	font-size: 1.1rem;
+	position: relative;
+	margin-left: 5rem;
+}
+
+.normal_nav ul li a {
+	text-decoration: none;
+	color: var(--black);
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	-ms-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+.normal_nav ul li a:hover {
+	opacity: 0.5;
+}
+
+/* ------- Navbar less than 1000px ------- */
+
+.nav_bmenu {
+	position: relative;
+	display: block;
+}
+
+/* Open/close navbar */
+#menuToggle {
+	display: none;
+	position: fixed;
+	top: 15px;
+	right: 45px;
+	z-index: 99;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#menuToggle a {
+	text-decoration: none;
+	color: var(--black);
+	transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+	color: var(--red);
+}
+
+#menuToggle input {
+	display: block;
+	width: 40px;
+	height: 32px;
+	position: absolute;
+	top: -7px;
+	left: -5px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 2;
+	-webkit-touch-callout: none;
+}
+
+/* ------- Making the burger icon with <span> element ------- */
+#menuToggle span {
+	display: block;
+	width: 33px;
+	height: 4px;
+	margin-bottom: 5px;
+	position: relative;
+	background: var(--white);
+	border-radius: 3px;
+	z-index: 1;
+	transform-origin: 4px 0px;
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+		background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+		opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+	transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+	transform-origin: 0% 100%;
+}
+
+/* ------- Makes it into an X ------- */
+#menuToggle input:checked~span {
+	opacity: 1;
+	transform: rotate(45deg) translate(-2px, -1px);
+	background: var(--black);
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+	opacity: 0;
+	transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+	transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* ------- The burger menu ------- */
+#menu {
+	position: absolute;
+	width: 300px;
+	margin: -100px 0 0 -204px;
+	padding: 50px;
+	padding-top: 125px;
+	display: none;
+	background: var(--white);
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+	transform-origin: 0% 0%;
+	transform: translate(100%, 0);
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+	padding: 10px 0;
+	font-size: 22px;
+}
+
+#menuToggle input:checked~ul {
+	transform: none;
+}
+
+/* ------- The bubble svg in right corner ------- */
+nav svg {
+	display: none;
+	position: fixed;
+	width: 200px;
+	fill: var(--red);
+	fill-opacity: 0.9;
+	top: -90px;
+	right: -50px;
+	z-index: 2;
+}
+
+/* =======================
+   INTRO
+   ======================= */
+
+/* ------- Always centered container ------- */
+.intro_container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.intro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: var(--margin);
+	margin-top: 1rem;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.intro_paragraph {
+	width: 30rem;
+	text-align: center;
+	font-size: 1rem;
+}
+
+.intro_text_bold {
+	font-weight: 800;
+}
+
+
+.intro_img_container {
+	width: 9rem;
+}
+
+.intro_img_container img {
+	border-radius: 50%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, .375);
+}
+
+/* ------- Waving emoji hand in intro ------- */
+.wave {
+	animation-name: wave-animation;
+	animation-duration: 2.5s;
+	animation-iteration-count: 1;
+	transform-origin: 70% 70%;
+	display: inline-block;
+}
+
+@keyframes wave-animation {
+	0% {
+		transform: rotate(0.0deg)
+	}
+
+	10% {
+		transform: rotate(14.0deg)
+	}
+
+	20% {
+		transform: rotate(-8.0deg)
+	}
+
+	30% {
+		transform: rotate(14.0deg)
+	}
+
+	40% {
+		transform: rotate(-4.0deg)
+	}
+
+	50% {
+		transform: rotate(10.0deg)
+	}
+
+	60% {
+		transform: rotate(0.0deg)
+	}
+
+	100% {
+		transform: rotate(0.0deg)
+	}
+}
+
+/* ------- Up/down click-to-action buttons on landing page + footer ------- */
+.down a,
+.up a {
+	text-decoration: none;
+	font-size: 2rem;
+}
+
+.down:hover,
+.up a:hover {
+	animation: hithere 1s ease infinite;
+	display: inline-block;
+	cursor: pointer;
+}
+
+@keyframes hithere {
+	30% {
+		transform: scale(1.2);
+	}
+
+	40%,
+	60% {
+		transform: rotate(-20deg) scale(1.2);
+	}
+
+	50% {
+		transform: rotate(20deg) scale(1.2);
+	}
+
+	70% {
+		transform: rotate(0deg) scale(1.2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* =======================
+   CHROME BROWSER
+   ======================= */
+/* ------- Whole chrome browser wrapper ------- */
+.tabs_wrapper {
+	margin: var(--margin);
+	background-color: #ffffff;
+	border-radius: 20px;
+	box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* ------- Tabs + buttons container ------- */
+.tabs_top {
+	display: flex;
+	align-items: center;
+	background-color: #dee1e6;
+	height: 44px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+/* ------- Chrome browser buttons ------- */
+.tabs_buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 7px;
+	margin-left: 20px;
+	margin-right: 2%;
+}
+
+/* ------- Chrome browser buttons global ------- */
+.tabcolor {
+	border-radius: 50%;
+	width: 14px;
+	height: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	vertical-align: middle;
+	/*font-size: 17px;*/
+}
+
+/* ------- Individual colors ------- */
+.tabred {
+	background-color: #EE695E;
+}
+
+.tabyellow {
+	background-color: #F6BC4F;
+}
+
+.tabgreen {
+	background-color: #62C453;
+}
+
+/* ------- Icons inside buttons ------- */
+.tabgreen img {
+	width: 6px;
+	height: 6px;
+	display: none;
+	opacity: 0.6;
+}
+
+.tabcolor span {
+	margin-left: 0.5px;
+	display: none;
+	opacity: 0.6;
+}
+
+/* ------- Makes the icons display on hover ------- */
+.tabs_buttons:hover>.tabcolor span,
+.tabs_buttons:hover>.tabcolor img {
+	display: block;
+}
+
+/* ------- The current tab ------- */
+.tab_chrometab {
+	display: flex;
+	height: 36px;
+	padding: 15px;
+	align-items: center;
+	margin-top: 11px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 12px;
+	background-image: url(../img/chrome_tab_svg.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	gap: 8px;
+}
+
+.tab_favicon {
+	width: 17px;
+	height: 17px;
+	margin-left: 2px;
+}
+
+/* ------- The X ------- */
+.tab_times {
+	position: relative;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path stroke='rgba(0, 0, 0, .65)' stroke-linecap='square' stroke-width='1.5' d='M0 0 L8 8 M8 0 L0 8'></path></svg>");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 8px 8px;
+}
+
+.tab_times:hover {
+	background-color: #e8eaed;
+}
+
+/* ------- Open new tab ------- */
+.tab_new {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 9px;
+}
+
+.tab_new img {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	padding: 6px;
+	transition: all 0.35s ease-in-out;
+}
+
+.tab_new img:hover {
+	background-color: #B3BAC4;
+}
+
+/* =======================
+   PROJECTS DESIGN
+   ======================= */
+/* ------- Projects title ------- */
+.tabs_header {
+	text-align: center;
+	margin-bottom: 86px;
+	margin-top: 100px;
+}
+
+.tabs_header h2 {
+	position: relative;
+	display: inline-block;
+}
+
+/* ------- Project titles image------- */
+.tabs_header img {
+	width: 7rem;
+	position: absolute;
+	transform: scaleX(-1);
+	bottom: -5.9rem;
+	right: -6.8rem;
+}
+
+/* ------- List of projects ------- */
+.tabs ul {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--red);
+	font-size: 1rem;
+	margin-bottom: 25px;
+	width: 100%;
+}
+
+.tabs ul li {
+	padding: 15px;
+	border-right: 1px solid #dddddd;
+	text-align: center;
+	color: var(--white);
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 3px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	position: relative;
+	flex-grow: 1;
+}
+
+.tabs ul li:hover {
+	-webkit-box-shadow: inset 0px 0px 1px 9px rgba(0, 0, 0, 0.87);
+	box-shadow: inset 0px 0px 30px 9px rgba(0, 0, 0, 0.4);
+}
+
+.tabs ul li.active {
+	box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: inset 0px 0px 1px 9px rgba(0, 0, 0, 0.87);
+	box-shadow: inset 0px 0px 30px 9px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ------- Wrapper of all the content ------- */
+.tab_content_wrapper {
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.tab_wrap .tab_project_title {
+	margin-bottom: 15px;
+}
+
+/* ------- The individual project wrappers ------- */
+.tab_wrap {
+	display: none;
+}
+
+.tab_wrap:first-child {
+	display: block;
+}
+
+.tab_mockup {
+	width: 30%;
+	min-width: 250px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+}
+
+.tab_content_text {
+	margin-bottom: 10px;
+	text-align: center;
+	width: 60%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+.tab_wrap a {
+	text-decoration: underline;
+	color: var(--black);
+}
+
+.tab_wrap a:hover {
+	opacity: 0.6;
+}
+
+.tab_content aside {
+	font-size: 12px;
+	float: right;
+}
+
+/* ------- Projects styletile ------- */
+.tab_styletile {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.tab_styletile h4 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+/* ------- Styletile colors ------- */
+.tab_styletile_colors {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: 2em;
+}
+
+/* ------- Global styling of the styletile colors ------- */
+.tab_styletile_color {
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+}
+
+/* ----------------------------    Individual styling ----------------------------    */
+/* ------- Sunshine ------- */
+.sunshine_color1 {
+	background-color: #F9B233;
+}
+
+.sunshine_color2 {
+	background-color: #ecf0f1;
+}
+
+.sunshine_color3 {
+	background-color: #000000;
+	color: white;
+}
+
+.sunshine_color4 {
+	background-color: #999999;
+}
+
+/* ------- Løgismose ------- */
+.logismose_color1 {
+	background-color: #4C0013;
+	color: white;
+}
+
+.logismose_color2 {
+	background-color: #ff2f61;
+}
+
+.logismose_color3 {
+	background-color: #ffffff;
+	border: 1px solid black;
+}
+
+.logismose_color4 {
+	background-color: #191919;
+	color: white;
+}
+
+/* ------- GROW ------- */
+.grow_color1 {
+	background-color: #83AFB4;
+}
+
+.grow_color2 {
+	background-color: #000000;
+	color: white;
+}
+
+.grow_color3 {
+	background-color: #ffffff;
+	border: 1px solid black;
+}
+
+.grow_color4 {
+	background-color: #2C5E4F;
+	color: white;
+}
+
+/* ------- Åpark Dormitory ------- */
+.aapark_color1 {
+	background-color: #4ecc69;
+}
+
+.aapark_color2 {
+	background-color: #707e73;
+}
+
+.aapark_color3 {
+	background-color: #EBEBEB;
+}
+
+.aapark_color4 {
+	background-color: #000000;
+	color: white;
+}
+
+.aapark_color5 {
+	background-color: #ffffff;
+	border: 1px solid black;
+}
+
+/* ------- Kildehunden ------- */
+.kildehunden_color1 {
+	background-color: #F5EBE9;
+}
+
+.kildehunden_color2 {
+	background-color: #f8fbff;
+	border: 1px solid black;
+}
+
+.kildehunden_color3 {
+	background-color: #F4B684;
+}
+
+.kildehunden_color4 {
+	background-color: #A8C9EA;
+}
+
+.kildehunden_color5 {
+	background-color: #000000;
+	color: white;
+}
+
+/* ------- Mixfever ------- */
+.mixfever_color1 {
+	background-color: #ffffff;
+	border: 1px solid black;
+}
+
+.mixfever_color2 {
+	background-color: #B67FCA;
+}
+
+.mixfever_color3 {
+	background-color: #000000;
+	color: white;
+}
+
+.mixfever_color4 {
+	box-shadow: inset 0 0.5em 0 #DBC8DA, inset 0 1em 0 #6DB8BE, inset 0 1.5em 0 #A4DED0, inset 0 2em 0 #C89E92, inset 0 2.5em 0 #F9B233, inset 0 3em 0 yellow, inset 0 3.5em 0 #4ecc69, inset 0 4em 0 #ff2f61, inset 0 4.5em 0 #2C5E4F, inset 0 5em 0 violet, inset 0 5.5em 0 #A8C9EA;
+	color: black;
+	text-align: center;
+}
+
+
+/* ------- Styletile illustrations ------- */
+.tab_styletile_illustrations {
+	display: block;
+	margin: 0 auto;
+}
+
+.tab_styletile_images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.tab_styletile_images img {
+	width: 6em;
+}
+
+/* Sunshine logo */
+.fix_img {
+	height: 6em;
+}
+
+/* GROW img */
+.grow_illustrations img {
+	padding-right: 10px;
+}
+
+/* GROW splitter */
+.bottom_split {
+	background-image: url(../img/grow/GROW_deleren.jpg);
+	width: 6em;
+	height: 6em;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: 20px;
+	border: 0.01em solid black;
+}
+
+/* GROW banner */
+.grow_banner {
+	width: 15em !important;
+	margin-bottom: 6px;
+}
+
+/* Mixfever SVGs */
+.mixfever_img img {
+	width: 6em;
+	height: 6em;
+}
+
+/* Kildehunden 404 banner */
+.kk_banner {
+	width: 12em !important;
+}
+
+/* ------- API's & libraries ------- */
+.tab_api_title {
+	margin-top: 29px;
+}
+
+.tab_apis {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+/* =======================
+   TOOLS
+   ======================= */
+/* ------- Whole wrapper ------- */
+.tools_wrapper {
+	margin-top: 7.5rem;
+	position: relative;
+}
+
+.tools_section {
+	display: flex;
+	flex-direction: row;
+	color: var(--white);
+	background: rgb(76, 19, 26);
+	background: linear-gradient(0deg, rgba(76, 19, 26, 0.9) 0%, rgba(178, 80, 92, 1) 100%, rgba(178, 80, 92, 1) 100%);
+}
+
+/* ------- Individual card ------- */
+.tools_card {
+	width: 50%;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 10rem;
+}
+
+.tools_img_container {
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	margin: -5.5em 0px 0px 0px;
+	position: absolute;
+	width: 100%;
+}
+
+.tools_img_container img {
+	box-shadow: 0 0.5rem 5rem rgba(0, 0, 0, .375);
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 50%;
+	border: 2px solid white;
+	width: 11em;
+	height: 11em;
+}
+
+.tools_skill_img {
+	width: 4em;
+	height: 4em;
+	color: var(--white);
+	margin-bottom: 0.5rem;
+	margin-top: 1rem;
+}
+
+.tools_text_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/* ------- The text ------- */
+.tools_text {
+	margin-top: 4.5rem;
+	width: 50%;
+}
+
+.tools_group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-grow: 1;
+	margin-bottom: 2rem;
+}
+
+.tools_text h3 {
+	margin-bottom: 20px;
+}
+
+/* ------- Fancy LinkedIn icon ------- */
+.linkedin_badge_icon {
+	vertical-align: middle;
+	margin-left: 3px;
+	line-height: 1;
+}
+
+.tools_text span img {
+	width: 14px;
+	height: 19px;
+}
+
+/* ------- LinkedIn hover tooltip ------- */
+[data-tooltip] {
+	position: relative;
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+	line-height: 1;
+	font-size: .9em;
+	pointer-events: none;
+	position: absolute;
+	box-sizing: border-box;
+	display: none;
+	opacity: 0;
+	font-family: sans-serif;
+}
+
+[data-tooltip]:before {
+	content: "";
+	border: 5px solid transparent;
+	z-index: 100;
+}
+
+[data-tooltip]:after {
+	content: attr(data-tooltip);
+	text-align: center;
+	min-width: 3em;
+	max-width: 21em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 9px 19px;
+	border-radius: 3px;
+	background: #1A1A1A;
+	color: #FFFFFF;
+	z-index: 99;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+	display: block;
+	opacity: 1;
+}
+
+[data-tooltip]:not([data-flow])::before,
+[data-tooltip][data-flow="top"]::before {
+	bottom: 100%;
+	border-bottom-width: 0;
+	border-top-color: #1A1A1A;
+}
+
+[data-tooltip]:not([data-flow])::after,
+[data-tooltip][data-flow="top"]::after {
+	bottom: calc(100% + 5px);
+}
+
+[data-tooltip]:not([data-flow])::before,
+[tooltip]:not([data-flow])::after,
+[data-tooltip][data-flow="top"]::before,
+[data-tooltip][data-flow="top"]::after {
+	left: 50%;
+	-webkit-transform: translate(-50%, -4px);
+	transform: translate(-50%, -4px);
+}
+
+[data-tooltip][data-flow="bottom"]::before {
+	top: 100%;
+	border-top-width: 0;
+	border-bottom-color: #1A1A1A;
+}
+
+[data-tooltip][data-flow="bottom"]::after {
+	top: calc(100% + 5px);
+}
+
+[data-tooltip][data-flow="bottom"]::before,
+[data-tooltip][data-flow="bottom"]::after {
+	left: 50%;
+	-webkit-transform: translate(-50%, 8px);
+	transform: translate(-50%, 8px);
+}
+
+[data-tooltip][data-flow="left"]::before {
+	top: 50%;
+	border-right-width: 0;
+	border-left-color: #1A1A1A;
+	left: calc(0em - 5px);
+	-webkit-transform: translate(-8px, -50%);
+	transform: translate(-8px, -50%);
+}
+
+[data-tooltip][data-flow="left"]::after {
+	top: 50%;
+	right: calc(100% + 5px);
+	-webkit-transform: translate(-8px, -50%);
+	transform: translate(-8px, -50%);
+}
+
+[data-tooltip][data-flow="right"]::before {
+	top: 50%;
+	border-left-width: 0;
+	border-right-color: #1A1A1A;
+	right: calc(0em - 5px);
+	-webkit-transform: translate(8px, -50%);
+	transform: translate(8px, -50%);
+}
+
+[data-tooltip][data-flow="right"]::after {
+	top: 50%;
+	left: calc(100% + 5px);
+	-webkit-transform: translate(8px, -50%);
+	transform: translate(8px, -50%);
+}
+
+[data-tooltip=""]::after,
+[data-tooltip=""]::before {
+	display: none !important;
+}
+
+/* ------- Bottom divider  ------- */
+.custom-shape-divider-bottom-1634818183 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1634818183 svg {
+	position: relative;
+	display: block;
+	width: calc(165% + 1.3px);
+	height: 117px;
+	transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1634818183 .shape-fill {
+	fill: #F9F9F1;
+}
+
+/* =======================
+   FOOTER
+   ======================= */
+/* ------- Bitmoji image  ------- */
+.footer_connect_img {
+	display: block;
+	margin: 0 auto;
+	width: 15rem;
+}
+
+/* ------- The entire wrapper  ------- */
+.footer_wrapper {
+	background: rgb(76, 19, 26);
+	background: linear-gradient(180deg, rgba(76, 19, 26, 0.9) 0%, rgba(178, 80, 92, 1) 100%, rgba(178, 80, 92, 1) 100%);
+	width: 100vw;
+	height: 60vh;
+	color: var(--white);
+	position: relative;
+}
+
+footer h2 {
+	color: var(--black);
+	margin: var(--margin);
+}
+
+footer h3 {
+	padding-top: 3rem;
+	font-size: 1.5rem;
+	margin: var(--margin);
+}
+
+/* ------- The media icons  ------- */
+footer ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding-top: 1rem;
+}
+
+footer li {
+	padding: 0.5rem;
+}
+
+footer li img {
+	width: 50px;
+}
+
+.footer_mail {
+	text-align: center;
+}
+
+.footer_mail p {
+	margin-top: 5rem;
+}
+
+.footer_mail a {
+	color: var(--white);
+}
+
+.footer_click_mail:hover {
+	opacity: 0.5;
+}
+
+/* ------- Copyright  ------- */
+footer aside {
+	text-align: center;
+	padding-top: 3%;
+	font-size: 0.6rem;
+}
+
+
+/* ------- SVG filters hover on media icon  ------- */
+.github_icon:hover {
+	filter: brightness(0%) saturate(100%) invert(35%) sepia(19%) saturate(1300%) hue-rotate(222deg) brightness(96%) contrast(87%);
+}
+
+.codepen_icon:hover {
+	filter: brightness(0%) saturate(100%);
+}
+
+.linkedin_icon:hover {
+	filter: brightness(0%) saturate(100%) invert(24%) sepia(83%) saturate(1830%) hue-rotate(180deg) brightness(103%) contrast(101%);
+}
+
+.stackoverflow_icon:hover {
+	filter: brightness(0%) saturate(100%) invert(80%) sepia(59%) saturate(5457%) hue-rotate(360deg) brightness(103%) contrast(103%);
+}
+
+.discord_icon:hover {
+	filter: brightness(0%) saturate(100%) invert(58%) sepia(47%) saturate(1086%) hue-rotate(200deg) brightness(102%) contrast(100%);
+}
+
+
+/* =======================
+   MEDIA QUERY
+   ======================= */
+@media only screen and (max-width: 1000px) {
+
+	/* ------- Nav bubble image ------- */
+	nav svg {
+		display: block;
+	}
+
+	/* ------- Navbar out, burgermenu in ------- */
+	.normal_nav {
+		display: none;
+	}
+
+	#menu,
+	#menuToggle {
+		display: block;
+	}
+
+	/* ------- Smaller intro text ------- */
+	h1 {
+		font-size: 2.3rem;
+	}
+
+	.intro_paragraph {
+		width: 22rem;
+	}
+
+	/* ------- Making the project title tabs go 3x2 instead of 1x6 ------- */
+	.tabs ul li {
+		width: 49%;
+		border: 1px solid #dddddd;
+	}
+
+	/* ------- Projects header image out, new margins and wider text on individual project ------- */
+	.tabs_header {
+		margin-top: 50px;
+		margin-bottom: 30px;
+	}
+
+	.tabs_header h2 img {
+		display: none;
+	}
+
+	.tab_content_text {
+		width: 90%;
+	}
+
+	/* ------- New margin, column cards instead of row cards  ------- */
+	.tools_wrapper header {
+		margin-bottom: 6rem;
+	}
+
+	.tools_section {
+		flex-direction: column;
+	}
+
+	.tools_card {
+		width: 100%;
+	}
+
+	.tools_text {
+		width: 100%;
+		margin: var(--margin);
+	}
+
+	.tools_top_card {
+		padding-bottom: 5rem;
+	}
+}

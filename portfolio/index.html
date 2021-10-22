@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Sigurd Mazanti - Portfolio">
+	<meta name="author" content="Sigurd Mazanti">
+	<meta name="keywords" content="frontend developer, ux designer, html, css, javascript, multimediadesign, seo">
+	<title>Sigurd Mazanti - Portfolio</title>
+	<link rel="icon" type="image/svg+xml" href="img/icons/favicon.svg" />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<main>
+<!--
+	==================
+	LANDING PAGE
+	==================
+-->
+		<section class="gradient" id="landingpage">
+			<!-- Nav brgermenu 1000px< -->
+			<nav class="nav_bmenu">
+				<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M38.2,-40.7C54.5,-31.7,76.4,-24.5,83.2,-11C89.9,2.5,81.5,22.4,68,33C54.4,43.5,35.6,44.8,19.7,48C3.8,51.1,-9.2,56.1,-22.4,54.4C-35.6,52.7,-49.1,44.4,-61.3,31.4C-73.4,18.4,-84.4,0.8,-79.5,-11.8C-74.6,-24.4,-53.9,-31.9,-38,-41C-22.1,-50,-11,-60.6,-0.1,-60.5C10.9,-60.4,21.8,-49.7,38.2,-40.7Z"
+						transform="translate(100 100)" />
+				</svg>
+				<div id="menuToggle">
+					<input type="checkbox" />
+					<span></span>
+					<span></span>
+					<span></span>
+					<ul id="menu">
+						<li><a href="#landingpage">Top</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#tools">Tools</a></li>
+						<li><a href="#connect">Connect</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<!-- Regular nav menu -->
+			<nav class="normal_nav">
+				<ul>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#tools">Tools</a></li>
+					<li><a href="#connect">Connect</a></li>
+				</ul>
+			</nav>
+
+			<!-- Introduction section -->
+			<div class="intro_container">
+				<header class="intro_text">
+					<h1>Hi, I'm Sigurd Mazanti!<span class="wave">👋</span></h1>
+				</header>
+				<section class="intro">
+					<div class="intro_img_container">
+						<img src="img/me_intro.png" alt="Bitmoji Sigurd Mazanti greeting">
+					</div>
+
+					<!-- Introduction text container -->
+					<div class="intro_paragraph">
+						<p>Currently studying 3rd semester <span class="intro_text_bold">Multimediadesign</span> @ <span
+								class="intro_text_bold">Business
+								Academy Aarhus</span>. I like designing concepts and I love coding them even more! Get
+							to know me:</p>
+						<!-- Link to #projects -->
+						<span class="down"><a href="#projects">👇</a></span>
+					</div>
+				</section>
+			</div>
+
+			<!-- Top divider wave -->
+			<div class="custom-shape-divider-top-1634485691">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+					preserveAspectRatio="none">
+					<path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill">
+					</path>
+				</svg>
+			</div>
+
+			<!-- Bottom divider wave w/ opacity -->
+			<div class="custom-shape-divider-bottom-1634485284">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+					preserveAspectRatio="none">
+					<path
+						d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+						opacity=".25" class="shape-fill"></path>
+					<path
+						d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+						opacity=".5" class="shape-fill"></path>
+					<path
+						d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+						class="shape-fill"></path>
+				</svg>
+			</div>
+		</section>
+
+<!--
+	==================
+	PROJECTS
+	==================
+-->
+		<!-- Google Chrome browser -->
+		<section class="tabs_wrapper" id="projects">
+			<!-- Browser header/bar -->
+			<div class="tabs_top">
+				<!-- Close/minimize/resize buttons (not functional) -->
+				<div class="tabs_buttons">
+					<div class="tabcolor tabred"><span>&times;</span></div>
+					<div class="tabcolor tabyellow"><span>&minus;</span></div>
+					<div class="tabcolor tabgreen"><img src="img/icons/resize_button.png" alt="Mac iOS resize icon">
+					</div>
+				</div>
+				<!-- The open browser tab -->
+				<div class="tab_chrometab">
+					<img src="img/icons/favicon.svg" class="tab_favicon" alt="Emoji student graduate">
+					<!-- Close browser tab (not functional) -->
+					<p class="tab_title">Sigurd Mazanti - Projects</p><span class="tab_times"></span>
+				</div>
+				<!-- Open new browser tab (not functional) -->
+				<div class="tab_new">
+					<img src="img/icons/plus_icon.svg" alt="Google Chrome plus icon">
+				</div>
+			</div>
+
+			<!-- Projects header -->
+			<header class="tabs_header">
+				<h2>Projects<img src="img/me_projects.png" alt="Bitmoji Sigurd Mazanti drinking coffee"></h2>
+			</header>
+			<!-- Project titles - interactive/clickable -->
+			<div class="tabs">
+				<ul>
+					<li class="active">
+						<span class="text">Sunshine*</span>
+					</li>
+					<li>
+						<span class="text">Løgismose*</span>
+					</li>
+					<li>
+						<span class="text">GROW</span>
+					</li>
+					<li>
+						<span class="text">Åparken*</span>
+					</li>
+					<li>
+						<span class="text">Kildehunden</span>
+					</li>
+					<li>
+						<span class="text">Mixfever</span>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Wrapper for the displayed content after clicking on tab -->
+			<div class="tab_content_wrapper">
+
+				<!-- Sunshine Sandwich -->
+				<div class="tab_wrap">
+					<h3 class="tab_project_title">Sunshine Sandwich</h3>
+					<div class="tab_content">
+						<article>
+							<!-- Project mockup -->
+							<img src="img/mockups/sunshine_sandwich_mockup.png"
+								alt="Sunshine Sandwich iPhone and MacBook mockup" class="tab_mockup">
+							<!-- Project description -->
+							<div class="tab_content_text">
+								<p>For our first group project on 1st semester, we created a prototype of a website for
+									the small local Sandwich shop in the heart of Aarhus, Sunshine Sandwich.</p>
+								<br><a href="https://sigurdmazanti.dk/sunshiny/">www.sigurdmazanti.dk/sunshiny</a>
+							</div>
+							<div class="tab_styletile">
+								<!-- Colors from the color palette used -->
+								<h4>Colors</h4>
+								<div class="tab_styletile_colors">
+									<span class="tab_styletile_color sunshine_color1">#F9B233</span>
+									<span class="tab_styletile_color sunshine_color2">#ECF0F1</span>
+									<span class="tab_styletile_color sunshine_color3">#000000</span>
+									<span class="tab_styletile_color sunshine_color4">#999999</span>
+								</div>
+								<!-- Illustrations used in the project -->
+								<h4>Illustrations</h4>
+								<div class="tab_styletile_illustrations">
+									<div class="tab_styletile_images">
+										<img src="img/sunshine/bruger2.svg" alt="Sunshine Sandwich concept burger">
+										<img src="img/sunshine/juice.svg" alt="Sunshine Sandwich concept juice">
+										<img src="img/sunshine/salat.svg" alt="Sunshine Sandwich concept salad">
+										<img src="img/sunshine/logo.svg" alt="Sunshine Sandwich concept logo"
+											class="fix_img">
+									</div>
+								</div>
+							</div>
+							<!-- Because they didn't know we were using their name and content ;) -->
+							<aside>
+								<p>* Non-affiliated</p>
+							</aside>
+						</article>
+					</div>
+				</div>
+
+				<!-- Løgismose Balsamic Vinegar -->
+				<div class="tab_wrap">
+					<h3 class="tab_project_title">Løgismose Balsamic Vinegar</h3>
+					<div class="tab_content">
+						<article>
+							<!-- Project mockup -->
+							<img src="img/mockups/løgismose_mockup.png"
+								alt="Løgismose Balsamic Vinegar iPhone and MacBook mockup" class="tab_mockup">
+							<!-- Project description -->
+							<div class="tab_content_text">
+								<p>For my 1st semester exam project, I created a prototype of a website for Løgismoses
+									Balsamic Vinegar. My solution's main purpose was to inspire & help users on choosing
+									the right balsamic vinegar and how to use it in recipes.</p>
+								<br><a
+									href="https://www.sigurdmazanti.dk/balsamicoeddike">www.sigurdmazanti.dk/balsamicoeddike</a>
+							</div>
+							<div class="tab_styletile">
+								<!-- Colors from the color palette used -->
+								<h4>Colors</h4>
+								<div class="tab_styletile_colors">
+									<span class="tab_styletile_color logismose_color1">#4C0013</span>
+									<span class="tab_styletile_color logismose_color2">#FF2F61</span>
+									<span class="tab_styletile_color logismose_color3">#FFFFFF</span>
+									<span class="tab_styletile_color logismose_color4">#191919</span>
+								</div>
+								<!-- Illustrations used in the project -->
+								<h4>Illustrations</h4>
+								<div class="tab_styletile_illustrations">
+									<div class="tab_styletile_images">
+										<img src="img/logismose/balsamicoaeble.png"
+											alt="Løgismose Balsamic vinegar concept apple">
+										<img src="img/logismose/balsamicohvid.png"
+											alt="Løgismose Balsamic vinegar concept white">
+										<img src="img/logismose/balsamicoroed.png"
+											alt="Løgismose Balsamic vinegar concept red">
+										<img src="img/logismose/treflaskereddike.png" class="fix_img"
+											alt="Løgismose Balsamic vinegar concept apple, white, red">
+									</div>
+								</div>
+							</div>
+							<!-- Because they didn't know we were using their name and content ;) -->
+							<aside>
+								<p>* Non-affiliated</p>
+							</aside>
+						</article>
+					</div>
+				</div>
+
+				<!-- GROW -->
+				<div class="tab_wrap">
+					<h3 class="tab_project_title">GROW Webdocumentary & SoMe-Strategy</h3>
+					<div class="tab_content">
+						<article>
+							<!-- Project mockup -->
+							<img src="img/mockups/grow_mockup.png" alt="EAAA GROW iPhone and MacBook mockup"
+								class="tab_mockup">
+							<!-- Project description -->
+							<div class="tab_content_text">
+								<p>We worked closely with EAAA's GROW for our first group project on 2nd semester. We
+									developed a webdocumentary and furthermore a SoMe-strategy to promote and expand
+									EAAA's student incubator.</p>
+								<br><a href="https://www.sigurdmazanti.dk/grow">www.sigurdmazanti.dk/grow</a> & <a
+									href="https://sigurdmazanti.dk/grow/log-ind/somestrategi">www.sigurdmazanti.dk/grow/log-ind/somestrategi</a>
+							</div>
+							<div class="tab_styletile">
+								<!-- Colors from the color palette used -->
+								<h4>Colors</h4>
+								<div class="tab_styletile_colors">
+									<span class="tab_styletile_color grow_color1">#83AFB4</span>
+									<span class="tab_styletile_color grow_color2">#000000</span>
+									<span class="tab_styletile_color grow_color3">#FFFFFF</span>
+									<span class="tab_styletile_color grow_color4">#2C5E4F</span>
+								</div>
+								<!-- Illustrations used in the project -->
+								<h4>Illustrations</h4>
+								<div class="tab_styletile_illustrations">
+									<div class="tab_styletile_images grow_illustrations">
+										<img src="img/grow/GROW_hvidlogo.png" alt="GROW concept white logo">
+										<img src="img/grow/grow_banner_test.png" class="grow_banner"
+											alt="GROW concept banner">
+										<div class="bottom_split"></div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<!-- Åpark Dormitory -->
+				<div class="tab_wrap">
+					<h3 class="tab_project_title">Åpark Dormitory</h3>
+					<div class="tab_content">
+						<article>
+							<!-- Project mockup -->
+							<img src="img/mockups/aapark_kollegiet_mockup.png"
+								alt="Åpark Dormitory iPhone and MacBook mockup" class="tab_mockup">
+							<!-- Project description -->
+							<div class="tab_content_text">
+								<p>For this group project on 2nd semester, we created a digital solution that residents
+									of Åpark Dormitory could visit for frequent updates on what's going on at the
+									dormitory.</p>
+								<br><a href="https://www.sigurdmazanti.dk/kollegium">www.sigurdmazanti.dk/kollegium</a>
+							</div>
+							<div class="tab_styletile">
+								<!-- Colors from the color palette used -->
+								<h4>Colors</h4>
+								<div class="tab_styletile_colors">
+									<span class="tab_styletile_color aapark_color1">#4ECC69</span>
+									<span class="tab_styletile_color aapark_color2">#707E73</span>
+									<span class="tab_styletile_color aapark_color3">#EBEBEB</span>
+									<span class="tab_styletile_color aapark_color4">#000000</span>
+									<span class="tab_styletile_color aapark_color5">#FFFFFF</span>
+								</div>
+								<!-- Illustrations used in the project -->
+								<h4>Illustrations</h4>
+								<div class="tab_styletile_illustrations">
+									<div class="tab_styletile_images">
+										<img src="img/aapark/Logo.png" alt="Åpark Dormitory concept logo">
+										<img src="img/aapark/aaparkkollegiet.png" alt="Åpark Dormitory concept logo">
+									</div>
+								</div>
+								<!-- API's & libraries used in the project -->
+								<h4 class="tab_api_title">APIs & Libraries</h4>
+								<div class="tab_apis">
+									<a href="https://developer.sallinggroup.com/api-reference#apis-anti-food-waste">Salling
+										Group Food Waste API</a>
+									<a
+										href="https://developers.google.com/maps/documentation/places/web-service/autocomplete">Google
+										Places Autocomplete API</a>
+								</div>
+							</div>
+							<!-- Because they didn't know we were using their name and content ;) -->
+							<aside>
+								<p>* Non-affiliated</p>
+							</aside>
+						</article>
+					</div>
+				</div>
+
+				<!-- Kennel Kildehunden -->
+				<div class="tab_wrap">
+					<h3 class="tab_project_title">Kennel Kildehunden</h3>
+					<div class="tab_content">
+						<article>
+							<!-- Project mockup -->
+							<img src="img/mockups/kennel_kildehunden_mockup.png"
+								alt="Kennel Kildehunden iPhone and MacBook mockup" class="tab_mockup">
+							<!-- Project description -->
+							<div class="tab_content_text">
+								<p>For our final exam of 2nd semester, we worked closely with the owner of the dog
+									kennel Kildehunden.
+									We helped them eliminate pain points for themselves & customers alike by giving them
+									a website they could refer all customers to prior to them asking the owners directly
+									if they had any questions.
+									Furthermore, we helped them create a visual identity on their social medias &
+									through the website.<br><br>They liked our solution so much they want it to be their
+									main website. We are still developing it and are expecting a full release by the end
+									of 2021.</p>
+								<br><a href="https://sigurdmazanti.dk/Kildehunden">www.sigurdmazanti.dk/Kildehunden</a>
+							</div>
+							<div class="tab_styletile">
+								<!-- Colors from the color palette used -->
+								<h4>Colors</h4>
+								<div class="tab_styletile_colors">
+									<span class="tab_styletile_color kildehunden_color1">#F5EBE9</span>
+									<span class="tab_styletile_color kildehunden_color2">#F8FBFF</span>
+									<span class="tab_styletile_color kildehunden_color3">#F4B684</span>
+									<span class="tab_styletile_color kildehunden_color4">#A8C9EA</span>
+									<span class="tab_styletile_color kildehunden_color5">#000000</span>
+								</div>
+								<!-- Illustrations used in the project -->
+								<h4>Illustrations</h4>
+								<div class="tab_styletile_illustrations">
+									<div class="tab_styletile_images">
+										<img src="img/kildehunden/KK-logo.png" alt="Kennel Kildehunden concept logo">
+										<img src="img/kildehunden/forsikring.svg"
+											alt="Kennel Kildehunden concept insurance icon">
+										<img src="img/kildehunden/forside-billede-hunde.png"
+											alt="Kennel Kildehunden concept landing page dogs">
+										<img src="img/kildehunden/404-billede.png" class="kk_banner"
+											alt="Kennel Kildehunden concept 404 error image">
+									</div>
+								</div>
+								<!-- API's & libraries used in the project -->
+								<h4 class="tab_api_title">APIs & Libraries</h4>
+								<div class="tab_apis">
+									<a href="https://developers.facebook.com/docs/instagram-basic-display-api/">Instagram
+										Basic Display API</a>
+									<a href="https://instafeedjs.com/#/">Instafeed.js</a>
+									<a href="https://alvarotrigo.com/fullPage/">fullPage.js</a>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<!-- Mixfever -->
+				<div class="tab_wrap">
+					<h3 class="tab_project_title">Mixfever</h3>
+					<div class="tab_content">
+						<article>
+							<!-- Project mockup -->
+							<img src="img/mockups/mixfever_mockup.png" alt="Mixfever iPhone and MacBook mockup"
+								class="tab_mockup">
+							<!-- Project description -->
+							<div class="tab_content_text">
+								<p>Mixfever was our first project of 3rd semester. We created a single-page web app that
+									lets you filter cocktails by what ingredients you already have/wish to use.
+									All the cocktails and ingredients data are structured in JSON-format and is
+									appended all over the app with vanilla JS. It is developed for mobile but works on
+									computers and tablets as well.
+								</p>
+								<br><a href="http://waskiw.com/mixfever/#/">www.waskiw.com/mixfever</a>
+							</div>
+							<div class="tab_styletile">
+								<!-- Colors from the color palette used -->
+								<h4>Colors</h4>
+								<div class="tab_styletile_colors">
+									<span class="tab_styletile_color mixfever_color1">#FFFFFF</span>
+									<span class="tab_styletile_color mixfever_color2">#B67FCA</span>
+									<span class="tab_styletile_color mixfever_color3">#000000</span>
+									<span class="tab_styletile_color mixfever_color4">Cocktail colors!</span>
+								</div>
+								<!-- Illustrations used in the project -->
+								<h4>Illustrations</h4>
+								<div class="tab_styletile_illustrations">
+									<div class="tab_styletile_images mixfever_img">
+										<img src="img/mixfever/creamy.svg" alt="Mixfever concept drink White Russian">
+										<img src="img/mixfever/gin.svg" alt="Mixfever concept drink Gin">
+										<img src="img/mixfever/cocktail_shaker.svg"
+											alt="Mixfever concept Cocktail shaker">
+										<img src="img/mixfever/screwdriver.svg" alt="Mixfever concept Screwdriver">
+									</div>
+								</div>
+								<!-- API's & libraries used in the project -->
+								<h4 class="tab_api_title">APIs & Libraries</h4>
+								<div class="tab_apis">
+									<a href="https://jsonbin.io/">JSONBIN</a>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+<!--
+	==================
+	TOOLS/SKILLS
+	==================
+-->
+		<section class="tools_wrapper" id="tools">
+			<header>
+				<h2>Skills</h2>
+			</header>
+			<div class="tools_section">
+
+				<!-- Coding skills -->
+				<article class="tools_card tools_top_card">
+					<div class="tools_img_container">
+						<!-- 3d image out of container -->
+						<img src="img/me_code_think.png" alt="Bitmoji Sigurd Mazanti thinking about code">
+					</div>
+					<!-- The skills -->
+					<div class="tools_text_container">
+						<div class="tools_text">
+							<img src="img/icons/code.svg" class="tools_skill_img" alt="Coding icon html">
+							<h3>Coding</h3>
+							<div class="tools_group">
+								<h4>Languages</h4>
+								<p>HTML, CSS<span data-tooltip="LinkedIn Skill Assesment badge" data-flow="top"
+										class="linkedin_badge_icon"><img src="img/icons/linkedin_badge.png"
+											alt="LinkedIn skill assesment badge icon"></span>, JS
+								</p>
+							</div>
+							<div class="tools_group">
+								<h4>Methods</h4>
+								<p>(REST) API's + library usage & implementation, SEO<span
+										data-tooltip="LinkedIn Skill Assesment badge" data-flow="top"
+										class="linkedin_badge_icon"><img src="img/icons/linkedin_badge.png"
+											alt="LinkedIn skill assesment badge icon"></span>,
+									JSON,
+									Headless CMS, RWD, CRUD, SPA</p>
+							</div>
+							<div class="tools_group">
+								<h4>Tools</h4>
+								<p>Github, Visual Studio Code, JSONBIN, Codepen, Chrome Dev Tools, Schema,
+									Stackoverflow, W3</p>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<!-- UX/UI skills -->
+				<article class="tools_card">
+					<div class="tools_img_container">
+						<!-- 3d image out of container -->
+						<img src="img/me_sketching_tools.png" alt="Bitmoji Sigurd Mazanti sketching tools UX">
+					</div>
+					<!-- The skills -->
+					<div class="tools_text_container">
+						<div class="tools_text">
+							<img src="img/icons/brush-pencil.svg" class="tools_skill_img"
+								alt="Brush and pencil icon UX">
+							<h3>Design</h3>
+							<div class="tools_group">
+								<h4>Experience with</h4>
+								<p>UI + UX design & research, Visual identity building</p>
+							</div>
+							<div class="tools_group">
+								<h4>Methods</h4>
+								<p>Color scheming, UX laws, Usability testing, Interactive prototyping, Onboarding, IA
+								</p>
+							</div>
+							<div class="tools_group">
+								<h4>Tools</h4>
+								<p>Figma, InVision, Mega Creator, Red Gradient, Dribbble, Coolors, Lookback</p>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<!-- Bottom divider wave with opacity -->
+			<div class="custom-shape-divider-bottom-1634818183" id="connect">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+					preserveAspectRatio="none">
+					<path
+						d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+						opacity=".25" class="shape-fill"></path>
+					<path
+						d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+						opacity=".5" class="shape-fill"></path>
+					<path
+						d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+						class="shape-fill"></path>
+				</svg>
+			</div>
+		</section>
+
+<!--
+	==================
+	FOOTER/CONNECT
+	==================
+-->
+		<footer>
+			<h2>Let's connect:</h2>
+			<img src="img/me_connect.png" class="footer_connect_img" alt="Bitmoji Sigurd Mazanti connect social">
+			<div class="footer_wrapper">
+				<!-- List of medias -->
+				<ul>
+					<li><a href="https://github.com/Sigurdmazanti"><img src="img/icons/github_icon.svg"
+								class="github_icon" alt="Github icon"></a></li>
+					<li><a href="https://codepen.io/sigurdmazanti"><img src="img/icons/codepen_icon.svg"
+								class="codepen_icon" alt="Codepen icon"></a></li>
+					<li><a href="https://stackoverflow.com/users/14776809/sigurd-mazanti"><img
+								src="img/icons/stackoverflow_icon.svg" class="stackoverflow_icon"
+								alt="Stackoverflow icon"></a></li>
+					<li><a href="https://www.linkedin.com/in/sigurd-mazanti-643b701b7/"><img
+								src="img/icons/linkedin_icon.svg" class="linkedin_icon" alt="LinkedIn icon"></a></li>
+					<li><a href="https://discordapp.com/users/278949068036636674/"><img src="img/icons/discord_icon.svg"
+								class="discord_icon" alt="Discord icon"></a></li>
+				</ul>
+				<h3>Or send me an e-mail:</h3>
+				<div class="footer_mail">
+					<a href="mailto:sigmn@live.dk" class="footer_click_mail">sigmn@live.dk</a>
+					<!-- Link back to top -->
+					<p>Back to top<br><span class="up"><a href="#landingpage">☝️</a></span></p>
+				</div>
+				<aside>© Sigurd Mazanti 2021. All Rights Reserved.</aside>
+			</div>
+		</footer>
+
+	</main>
+	<script src="app/main.js"></script>
+</body>
+
+</html>
